@@ -16,4 +16,13 @@ And set the image.
 
 
 *With code*  
+There have a quick way to make a LSButton.  
 `+ (LSButton *)buttonWithFrame:(CGRect)frame icon:(UIImage*)icon buttonColor:(UIColor*)buttonColor shadowColor:(UIColor*)shadowColor tintColor:(UIColor*)tintColor radius:(CGFloat)radius angel:(CGFloat)angel target:(id)tar action:(SEL)sel;`
+
+
+*Change image color*  
+LSButton always tint your image with tint color. So change the tint color.
+
+*Update button*  
+If you change properties after drawRect:  
+You need call setNeedDisplay to update the view.
