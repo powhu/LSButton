@@ -26,7 +26,8 @@ There has a quick way to make a LSButton.
                        radius:(CGFloat)radius
                         angel:(CGFloat)angel
                       target:(id)tar
-                      action:(SEL)sel;```
+                      action:(SEL)sel;
+```
 
 
 *Change image color*  
