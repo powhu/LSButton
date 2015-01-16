@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LSButton.h"
 
 @interface ViewController : UIViewController
-
+{
+    IBOutlet LSButton *button;
+    LSButton *buttonFromCode;
+}
 
 @end
 

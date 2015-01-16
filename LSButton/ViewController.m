@@ -8,20 +8,31 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
-
-@end
-
 @implementation ViewController
 
-- (void)viewDidLoad {
+-(void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)viewDidLayoutSubviews
+{
+    if (!buttonFromCode)
+    {
+        buttonFromCode = [LSButton buttonWithFrame:CGRectOffset(button.frame, 0, -button.frame.size.height - 10) icon:button.currentImage buttonColor:[UIColor grayColor] shadowColor:[UIColor blackColor] tintColor:[UIColor whiteColor] radius:10 angel:45 target:nil action:nil];
+        [self.view addSubview:buttonFromCode];
+    }
 }
+
+- (IBAction)valueDidChanged:(UISlider *)sender
+{
+    button.angel = sender.value;
+    [button setNeedsDisplay];
+    
+    buttonFromCode.angel = sender.value;
+    [buttonFromCode setNeedsDisplay];
+}
+
 
 @end

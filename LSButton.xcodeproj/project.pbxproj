@@ -14,6 +14,7 @@
 		2FEA75E31A68DB88003B786D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FEA75E21A68DB88003B786D /* Images.xcassets */; };
 		2FEA75E61A68DB88003B786D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FEA75E41A68DB88003B786D /* LaunchScreen.xib */; };
 		2FEA75F21A68DB89003B786D /* LSButtonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FEA75F11A68DB89003B786D /* LSButtonTests.m */; };
+		2FEA75FD1A68DBC9003B786D /* LSButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FEA75FC1A68DBC9003B786D /* LSButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		2FEA75EB1A68DB89003B786D /* LSButtonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LSButtonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FEA75F01A68DB89003B786D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FEA75F11A68DB89003B786D /* LSButtonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSButtonTests.m; sourceTree = "<group>"; };
+		2FEA75FB1A68DBC9003B786D /* LSButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSButton.h; sourceTree = "<group>"; };
+		2FEA75FC1A68DBC9003B786D /* LSButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,8 @@
 		2FEA75D41A68DB88003B786D /* LSButton */ = {
 			isa = PBXGroup;
 			children = (
+				2FEA75FB1A68DBC9003B786D /* LSButton.h */,
+				2FEA75FC1A68DBC9003B786D /* LSButton.m */,
 				2FEA75D91A68DB88003B786D /* AppDelegate.h */,
 				2FEA75DA1A68DB88003B786D /* AppDelegate.m */,
 				2FEA75DC1A68DB88003B786D /* ViewController.h */,
@@ -219,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FEA75FD1A68DBC9003B786D /* LSButton.m in Sources */,
 				2FEA75DE1A68DB88003B786D /* ViewController.m in Sources */,
 				2FEA75DB1A68DB88003B786D /* AppDelegate.m in Sources */,
 				2FEA75D81A68DB88003B786D /* main.m in Sources */,

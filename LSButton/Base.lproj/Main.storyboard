@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +15,51 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRb-dk-3Gi" customClass="LSButton">
+                                <rect key="frame" x="229" y="233" width="143" height="134"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="134" id="SdF-3C-Ntq"/>
+                                    <constraint firstAttribute="width" constant="143" id="aTr-dK-gxT"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="icon">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.27630787345219321" green="0.40884958544753125" blue="0.57529348544973546" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" minValue="0.0" maxValue="360" translatesAutoresizingMaskIntoConstraints="NO" id="Mon-sO-eJ1">
+                                <rect key="frame" x="28" y="398" width="544" height="31"/>
+                                <connections>
+                                    <action selector="valueDidChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="vhZ-QZ-QPT"/>
+                                </connections>
+                            </slider>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Mon-sO-eJ1" secondAttribute="trailing" constant="30" id="59C-o8-SL5"/>
+                            <constraint firstItem="Mon-sO-eJ1" firstAttribute="top" secondItem="lRb-dk-3Gi" secondAttribute="bottom" constant="31" id="H3N-PB-k1c"/>
+                            <constraint firstItem="Mon-sO-eJ1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="30" id="NYi-DG-nQc"/>
+                            <constraint firstAttribute="centerY" secondItem="lRb-dk-3Gi" secondAttribute="centerY" id="PEw-Qe-2G6"/>
+                            <constraint firstAttribute="centerX" secondItem="lRb-dk-3Gi" secondAttribute="centerX" constant="-0.5" id="hVe-TC-GhG"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="button" destination="lRb-dk-3Gi" id="rfI-IJ-tMr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon" width="40" height="40"/>
+    </resources>
 </document>
